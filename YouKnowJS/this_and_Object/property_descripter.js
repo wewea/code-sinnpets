@@ -65,3 +65,15 @@ Object.defineProperty(myObject, "b", {
 for (var prop in myObject) {
 	console.log(prop);
 }
+
+var myGetObj = {
+	get a() {
+		return this._a_; 
+	},
+	set a(val) {
+		this._a_ = val;
+	}
+};
+
+console.log(Object.getOwnPropertyDescriptor(myGetObj, 'a'));
+

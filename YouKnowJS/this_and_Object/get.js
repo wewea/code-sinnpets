@@ -44,3 +44,16 @@ console.log(shit.a); // 4
 for (var i in shit) {
 	console.log(i); //a , _a_
 }
+
+// get 和 value 或 writeable属性不能同时存在
+Object.prototype.get = function () {
+	
+};
+
+var o = {}
+
+Object.defineProperty(o, 'a', {
+	value: 2
+});
+
+// console.log(Object.getOwnPropertyDescriptor(o, 'a'));
