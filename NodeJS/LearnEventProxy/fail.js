@@ -17,3 +17,7 @@ ep.bind('error', function (err) {
 
 // only trigger fail, after ep.bind('error') or ep.fail
 ep.emit('error', 'emit error');
+
+// not trigger after ep.bind('error')
+ep.emit('error', 'emit error again'); 
+

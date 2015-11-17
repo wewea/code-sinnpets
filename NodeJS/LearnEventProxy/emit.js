@@ -9,3 +9,15 @@ ep.on('event', function (data) {
 });
 
 ep.emit('event', 'What the Fxxx');
+
+ep.fail(function (err) {
+	console.log('fail:', err);
+});
+
+function foo() {
+	ep.emit('error', 'foo');
+
+	console.log('after emit'); // execute
+}
+
+foo();
