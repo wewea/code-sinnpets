@@ -45,6 +45,39 @@ function *logReturned(genObj) {
 	console.log(result);
 }
 
-var genArr = [...logReturned(genFuncWithReturn())];
-console.log(genArr); // ['a', 'b']
+// spread expression
+// var genArr = [...logReturned(genFuncWithReturn())];
+// console.log(genArr); // ['a', 'b']
+
+
+// 数组并行执行
+function timeout(delay) {
+	console.log(Date.now()); 
+	setTimeout(function () {
+	}, delay);
+}
+
+function *parallelArray() {
+	var now = Date.now();
+	// 同时开始
+	yield [timeout(300), timeout(500)];
+}
+
+// var iter = parallelArray();
+// iter.next();
+// iter.next();
+
+// 对象并行执行
+function *parallelObject() {
+	var now = Date.now();
+	// 同时开始
+	yield {
+		a: timeout(10),
+		b: timeout(100)
+	};
+}
+
+iter = parallelObject();
+iter.next();
+iter.next();
 

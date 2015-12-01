@@ -1,0 +1,21 @@
+- var books = ['A', 'B', 'C']
+
+select
+	each book, i in books
+		option(value=i) Book #{book}
+
+ul
+	for book, index in books
+		li(id=index) #{book} 
+	else
+		li sorry, no books!
+
+- obj = {1: 'a', 2: 'b', 3: 'c'}
+ul
+	each val,index in obj
+		li= index + ':' + val
+	
+- var n = 0
+ul
+	while n < 4
+		li= n++

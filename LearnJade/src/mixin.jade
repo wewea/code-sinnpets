@@ -1,0 +1,32 @@
+mixin book(name, price)
+	li #{name} for #{price}
+
+ul#books
+	+book("Book A", 12.99)
+	+book("Book B", 5.99)
+
+// with artibutes
+mixin foo(name)
+	div&attributes(attributes)= name
+
++foo("Book A")#first
++foo("Book B")(title="book b")
++foo("Book C").last
+
+// mixin block
+mixin withBlock(title)
+	h1= title
+	if block
+		block
+	else
+		p no block provied
+
++withBlock('ooOOoo')
+	p This is a block
+
+// mixin with rest arguments
+mixin list(id, ...items)
+	ul(id=id)
+		each item in items
+			li= item
++list('my-list', 1, 2, 3)

@@ -27,3 +27,4 @@ timeoutPromise(taskPromise, 1000).then(function (value) {
 }).catch(function (error) {
 	console.log('发生超时:', error);
 });
+

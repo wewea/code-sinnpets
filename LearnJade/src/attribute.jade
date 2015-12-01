@@ -1,0 +1,35 @@
+- var type="text"
+- var name="Bob"
+
+input(type="text", placeholder="your name")
+input(type=type, value='Hello #{name}')
+input(checked=true, disabled=false)
+
+a(href='google.com') Google
+
+// multiline
+input(
+	type='checkbox'
+	name='agreement'
+	checked
+)
+
+// no value defalut true
+input(type='checkbox', checked)
+input(type='checkbox', checked=false)
+input(type='checkbox', checked=true.toString())
+
+// style attribute
+a(style={color: 'red', background: 'green'})
+
+// class attribute
+- var classes = ['foo', 'bar']
+a(class=classes) 
+
+// object mapping class names 
+- var currentUrl = '/about'
+a(class={active: currentUrl === '/'} href='/') Home
+a(class={active: currentUrl === '/about'} href='/about') About
+
+// pronounced attributes 
+div#foo(data-bar='foo')&attributes({'data-foo': 'bar'})

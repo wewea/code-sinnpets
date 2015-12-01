@@ -26,4 +26,5 @@ console.log(fooIter.next());
 console.log(fooIter.next());
 console.log(fooIter.next());
 console.log(fooIter.next());
+console.log(fooIter.next());
 

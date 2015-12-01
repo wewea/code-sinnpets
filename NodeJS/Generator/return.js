@@ -6,5 +6,5 @@ function *gen() {
 var iter = gen();
 
 console.log(iter.next());
-console.log(iter.return('stop'));
+console.log(iter.return('stop')); // done
 console.log(iter.next());
