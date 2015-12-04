@@ -1,0 +1,22 @@
+extends ./layout.jade
+
+block content
+	div.ui.one.column.center.aligned.grid
+		div.column.six.wide.form-holder
+			h2.center.alianed.header.form-head
+				div.ui.form
+					div.field
+						input(type='text' placeholder='username')
+					div.field
+						input(type='password' placeholder='password')
+					div.field
+						input(
+							type='submit' 
+							value='sign in' 
+							class='ui button large fluid green'
+							)
+					div.inline.field
+						div.ui.checkbox
+							input(type='checkbox')
+							label Remember me
+

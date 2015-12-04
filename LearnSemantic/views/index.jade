@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		title. 
+			Semantic-UI
+		link(rel='stylesheet', href='/css/semantic.css')
+		script(src='//cdn.bootcss.com/jquery/2.1.4/jquery.min.js')
+		script(src='/js/semantic.js')
+		script(src='/js/main.js')
+	body
+		div.ui.menu.red
+			h3.header.item Brand
+			a.red.item tab 1
+			a.blue.item tab 2
+			a.yellow.item tab 3
+			a.green.item tab 4
+			span.floated.right.item 
+				a(href='#') Signed in 
+	
+		form.ui.form.segment
+			div.two.fields
+				div.field
+					label First Name
+					input(placeholder='First Name' name='first-name' type='text')
+				div.field
+					label Last Name
+					input(placeholder='Last Name' name='last-name' type='text')
+			button.ui.blue.submit.button Submit
+			div.ui.error.message
+
+
+
